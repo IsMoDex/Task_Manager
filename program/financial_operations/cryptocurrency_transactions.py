@@ -6,3 +6,7 @@ class CryptoTransaction:
 
     def display_transaction(self):
         print(f"Crypto: {self.crypto_type}, Amount: {self.amount}, Date: {self.date}")
+
+# Дополнительный код для конфликта в ветке financial_operations
+def calculate_tax(amount):
+    return amount * 0.15
