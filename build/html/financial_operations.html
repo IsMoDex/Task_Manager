@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>financial_operations Modules &#8212; документация Task Manager 1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=47a0e12c"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=cd1d70c9"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="innovative_technologies Modules" href="innovative_technologies.html" />
+    <link rel="prev" title="Task Manager documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="financial-operations-modules">
+<span id="financial-operations"></span><h1>financial_operations Modules<a class="headerlink" href="#financial-operations-modules" title="Ссылка на этот заголовок">¶</a></h1>
+<dl class="py class" id="module-cryptocurrency_transactions">
+<dt class="sig sig-object py" id="cryptocurrency_transactions.CryptoTransaction">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cryptocurrency_transactions.</span></span><span class="sig-name descname"><span class="pre">CryptoTransaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crypto_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cryptocurrency_transactions.CryptoTransaction" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Представляет транзакцию криптовалюты.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cryptocurrency_transactions.CryptoTransaction.crypto_type">
+<span class="sig-name descname"><span class="pre">crypto_type</span></span><a class="headerlink" href="#cryptocurrency_transactions.CryptoTransaction.crypto_type" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Тип криптовалюты (например, „Bitcoin“, „Ethereum“).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cryptocurrency_transactions.CryptoTransaction.amount">
+<span class="sig-name descname"><span class="pre">amount</span></span><a class="headerlink" href="#cryptocurrency_transactions.CryptoTransaction.amount" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Сумма транзакции.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cryptocurrency_transactions.CryptoTransaction.date">
+<span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#cryptocurrency_transactions.CryptoTransaction.date" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Дата транзакции в формате „YYYY-MM-DD“.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cryptocurrency_transactions.CryptoTransaction.display_transaction">
+<span class="sig-name descname"><span class="pre">display_transaction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cryptocurrency_transactions.CryptoTransaction.display_transaction" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Выводит информацию о транзакции в формате строки.</p>
+<dl>
+<dt>Пример:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transaction</span> <span class="o">=</span> <span class="n">CryptoTransaction</span><span class="p">(</span><span class="s1">&#39;Bitcoin&#39;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;2023-10-01&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transaction</span><span class="o">.</span><span class="n">display_transaction</span><span class="p">()</span>
+<span class="go">Crypto: Bitcoin, Amount: 0.5, Date: 2023-10-01</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cryptocurrency_transactions.calculate_tax">
+<span class="sig-prename descclassname"><span class="pre">cryptocurrency_transactions.</span></span><span class="sig-name descname"><span class="pre">calculate_tax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cryptocurrency_transactions.calculate_tax" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Вычисляет налог на сумму транзакции.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> (<em>float</em>) – Сумма, на которую будет рассчитан налог.</p>
+</dd>
+<dt class="field-even">Результат<span class="colon">:</span></dt>
+<dd class="field-even"><p>Сумма налога, равная 20% от указанной суммы.</p>
+</dd>
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Исключение<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Если amount отрицательное.</p>
+</dd>
+</dl>
+<dl>
+<dt>Пример:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">calculate_tax</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="go">20.0</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class" id="module-financial_automation">
+<dt class="sig sig-object py" id="financial_automation.AutomatedFinanceSystem">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">financial_automation.</span></span><span class="sig-name descname"><span class="pre">AutomatedFinanceSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.AutomatedFinanceSystem" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Автоматизированная финансовая система для управления пользователем.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.AutomatedFinanceSystem.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#financial_automation.AutomatedFinanceSystem.user" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Пользователь, для которого выполняются операции.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#financial_automation.User" title="financial_automation.User">User</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.AutomatedFinanceSystem.report">
+<span class="sig-name descname"><span class="pre">report</span></span><a class="headerlink" href="#financial_automation.AutomatedFinanceSystem.report" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Финансовый отчет пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#financial_automation.FinancialReport" title="financial_automation.FinancialReport">FinancialReport</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.AutomatedFinanceSystem.tax_calculator">
+<span class="sig-name descname"><span class="pre">tax_calculator</span></span><a class="headerlink" href="#financial_automation.AutomatedFinanceSystem.tax_calculator" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Калькулятор налога на доход пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#financial_automation.TaxCalculator" title="financial_automation.TaxCalculator">TaxCalculator</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="financial_automation.AutomatedFinanceSystem.automate_operations">
+<span class="sig-name descname"><span class="pre">automate_operations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.AutomatedFinanceSystem.automate_operations" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Автоматически выполняет несколько операций: пополнение, перевод, снятие.</p>
+<p>В процессе выполнения операций:
+- Баланс пользователя пополняется случайной суммой.
+- Снимается случайная сумма, если это возможно.
+- Может быть выполнен перевод средств другому пользователю.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="financial_automation.FinancialReport">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">financial_automation.</span></span><span class="sig-name descname"><span class="pre">FinancialReport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.FinancialReport" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Представляет финансовый отчет для пользователя.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.FinancialReport.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#financial_automation.FinancialReport.user" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Пользователь, для которого создается отчет.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#financial_automation.User" title="financial_automation.User">User</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.FinancialReport.transactions">
+<span class="sig-name descname"><span class="pre">transactions</span></span><a class="headerlink" href="#financial_automation.FinancialReport.transactions" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Список транзакций пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="financial_automation.FinancialReport.generate_report">
+<span class="sig-name descname"><span class="pre">generate_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.FinancialReport.generate_report" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Генерирует отчет о финансовых операциях пользователя.</p>
+<p>Выводит на экран список всех транзакций и текущий баланс пользователя.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="financial_automation.FinancialReport.record_transaction">
+<span class="sig-name descname"><span class="pre">record_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.FinancialReport.record_transaction" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Записывает финансовую операцию в журнал.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transaction_type</strong> (<em>str</em>) – Тип транзакции (например, „депозит“, „снятие“, „перевод“).</p></li>
+<li><p><strong>amount</strong> (<em>float</em>) – Сумма транзакции.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="financial_automation.TaxCalculator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">financial_automation.</span></span><span class="sig-name descname"><span class="pre">TaxCalculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">income</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tax_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.15</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.TaxCalculator" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Рассчитывает налог на доход.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.TaxCalculator.income">
+<span class="sig-name descname"><span class="pre">income</span></span><a class="headerlink" href="#financial_automation.TaxCalculator.income" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Доход пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.TaxCalculator.tax_rate">
+<span class="sig-name descname"><span class="pre">tax_rate</span></span><a class="headerlink" href="#financial_automation.TaxCalculator.tax_rate" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Ставка налога (по умолчанию 15%).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="financial_automation.TaxCalculator.calculate_tax">
+<span class="sig-name descname"><span class="pre">calculate_tax</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.TaxCalculator.calculate_tax" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Рассчитывает налог на доход.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Сумма налога, рассчитанная на основе дохода и ставки налога.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="financial_automation.User">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">financial_automation.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">balance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.User" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Представляет пользователя с балансом.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.User.username">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#financial_automation.User.username" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Имя пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="financial_automation.User.balance">
+<span class="sig-name descname"><span class="pre">balance</span></span><a class="headerlink" href="#financial_automation.User.balance" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Баланс пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="financial_automation.User.deposit">
+<span class="sig-name descname"><span class="pre">deposit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.User.deposit" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Пополнение баланса пользователя.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> (<em>float</em>) – Сумма пополнения.</p>
+</dd>
+<dt class="field-even">Исключение<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Если сумма пополнения меньше или равна нулю.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="financial_automation.User.transfer">
+<span class="sig-name descname"><span class="pre">transfer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recipient</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.User.transfer" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Перевод средств между пользователями.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amount</strong> (<em>float</em>) – Сумма перевода.</p></li>
+<li><p><strong>recipient</strong> (<a class="reference internal" href="#financial_automation.User" title="financial_automation.User"><em>User</em></a>) – Получатель перевода.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Исключение<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Если недостаточно средств на балансе для перевода.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="financial_automation.User.withdraw">
+<span class="sig-name descname"><span class="pre">withdraw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#financial_automation.User.withdraw" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Снятие средств с баланса.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>amount</strong> (<em>float</em>) – Сумма снятия.</p>
+</dd>
+<dt class="field-even">Исключение<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – Если сумма снятия меньше или равна нулю.</p></li>
+<li><p><strong>ValueError</strong> – Если недостаточно средств на балансе.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-forecasting">
+<dt class="sig sig-object py" id="forecasting.Task">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">forecasting.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimated_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">completion_times</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#forecasting.Task" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Представляет задачу с оценочным временем выполнения и приоритетом.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="forecasting.Task.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#forecasting.Task.title" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Название задачи.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="forecasting.Task.estimated_time">
+<span class="sig-name descname"><span class="pre">estimated_time</span></span><a class="headerlink" href="#forecasting.Task.estimated_time" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Оценочное время выполнения задачи в часах.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="forecasting.Task.priority">
+<span class="sig-name descname"><span class="pre">priority</span></span><a class="headerlink" href="#forecasting.Task.priority" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Приоритет задачи (1 - низкий, 5 - высокий).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="forecasting.Task.completion_times">
+<span class="sig-name descname"><span class="pre">completion_times</span></span><a class="headerlink" href="#forecasting.Task.completion_times" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Список времени выполнения задачи в часах.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="forecasting.Task.add_completion_time">
+<span class="sig-name descname"><span class="pre">add_completion_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_spent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#forecasting.Task.add_completion_time" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Добавляет время выполнения в историю.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time_spent</strong> (<em>float</em>) – Время, затраченное на выполнение задачи в часах.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="forecasting.Task.display_forecast">
+<span class="sig-name descname"><span class="pre">display_forecast</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forecasting.Task.display_forecast" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Выводит прогноз и рекомендации по задаче.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="forecasting.Task.predict_completion_time">
+<span class="sig-name descname"><span class="pre">predict_completion_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forecasting.Task.predict_completion_time" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Прогнозирует время выполнения на основе истории.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Прогнозируемое время выполнения задачи в часах.</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="forecasting.Task.recommend_priority">
+<span class="sig-name descname"><span class="pre">recommend_priority</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#forecasting.Task.recommend_priority" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Рекомендует приоритет на основе срочности и важности.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Рекомендуемый приоритет задачи (1 - низкий, 5 - высокий).</p>
+</dd>
+<dt class="field-even">Тип результата<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Task Manager</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">financial_operations Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cryptocurrency_transactions.CryptoTransaction"><code class="docutils literal notranslate"><span class="pre">CryptoTransaction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cryptocurrency_transactions.calculate_tax"><code class="docutils literal notranslate"><span class="pre">calculate_tax()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#financial_automation.AutomatedFinanceSystem"><code class="docutils literal notranslate"><span class="pre">AutomatedFinanceSystem</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#financial_automation.FinancialReport"><code class="docutils literal notranslate"><span class="pre">FinancialReport</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#financial_automation.TaxCalculator"><code class="docutils literal notranslate"><span class="pre">TaxCalculator</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#financial_automation.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forecasting.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="innovative_technologies.html">innovative_technologies Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="task_management.html">task_management Modules</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="предыдущая глава">Task Manager documentation</a></li>
+      <li>Next: <a href="innovative_technologies.html" title="следующая глава">innovative_technologies Modules</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Modex.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.1</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/financial_operations.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
