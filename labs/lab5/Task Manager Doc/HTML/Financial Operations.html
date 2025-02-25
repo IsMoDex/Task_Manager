@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документация модуля Financial Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Документация модуля Financial Operations</h1>
+    <p>Модуль <strong>Financial Operations</strong> отвечает за управление финансовыми транзакциями пользователей, включая операции пополнения, снятия и перевода средств. Он также предоставляет функциональность для ведения финансовых отчетов и расчета налогов.</p>
+
+    <h2>Классы и функции модуля</h2>
+
+    <h3>1. Класс User</h3>
+    <p>Представляет пользователя с балансом.</p>
+    <h4>Атрибуты:</h4>
+    <ul>
+        <li><strong>username (str)</strong>: Имя пользователя.</li>
+        <li><strong>balance (float)</strong>: Баланс пользователя.</li>
+    </ul>
+    <h4>Методы:</h4>
+    <ul>
+        <li><strong>__init__(self, username, balance=0)</strong>: Инициализирует объект User.</li>
+        <li><strong>deposit(self, amount)</strong>: Пополнение баланса пользователя.</li>
+        <li><strong>withdraw(self, amount)</strong>: Снятие средств с баланса.</li>
+        <li><strong>transfer(self, amount, recipient)</strong>: Перевод средств между пользователями.</li>
+    </ul>
+
+    <h3>2. Класс FinancialReport</h3>
+    <p>Представляет финансовый отчет для пользователя.</p>
+    <h4>Атрибуты:</h4>
+    <ul>
+        <li><strong>user (User)</strong>: Пользователь, для которого создается отчет.</li>
+        <li><strong>transactions (list)</strong>: Список транзакций пользователя.</li>
+    </ul>
+    <h4>Методы:</h4>
+    <ul>
+        <li><strong>__init__(self, user)</strong>: Инициализирует объект FinancialReport.</li>
+        <li><strong>record_transaction(self, transaction_type, amount)</strong>: Записывает финансовую операцию в журнал.</li>
+        <li><strong>generate_report(self)</strong>: Генерирует отчет о финансовых операциях пользователя.</li>
+    </ul>
+
+    <h3>3. Класс TaxCalculator</h3>
+    <p>Рассчитывает налог на доход.</p>
+    <h4>Атрибуты:</h4>
+    <ul>
+        <li><strong>income (float)</strong>: Доход пользователя.</li>
+        <li><strong>tax_rate (float)</strong>: Ставка налога (по умолчанию 15%).</li>
+    </ul>
+    <h4>Методы:</h4>
+    <ul>
+        <li><strong>__init__(self, income, tax_rate=0.15)</strong>: Инициализирует объект TaxCalculator.</li>
+        <li><strong>calculate_tax(self)</strong>: Рассчитывает налог на доход.</li>
+    </ul>
+
+    <h3>4. Класс AutomatedFinanceSystem</h3>
+    <p>Автоматизированная финансовая система для управления пользователем.</p>
+    <h4>Атрибуты:</h4>
+    <ul>
+        <li><strong>user (User)</strong>: Пользователь, для которого выполняются операции.</li>
+        <

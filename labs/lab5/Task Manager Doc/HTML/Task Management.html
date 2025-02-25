@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документация модуля Task Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Документация модуля Task Management</h1>
+    <p>Модуль <strong>Task Management</strong> отвечает за управление задачами, включая создание, отслеживание и управление проектами. Он предоставляет функциональность для работы с шаблонами задач, командной работы и управления майлстоунами.</p>
+
+    <h2>Классы и функции модуля</h2>
+
+    <h3>1. Класс Task</h3>
+    <p>Представляет задачу в системе.</p>
+    <h4>Атрибуты:</h4>
+    <ul>
+        <li><strong>title (str)</strong>: Название задачи.</li>
+        <li><strong>description (str)</strong>: Описание задачи.</li>
+        <li><strong>due_date (str)</strong>: Срок выполнения задачи в формате 'YYYY-MM-DD'.</li>
+        <li><strong>status (str)</strong>: Статус задачи (например, 'выполнена', 'в процессе').</li>
+    </ul>
+    <h4>Методы:</h4>
+    <ul>
+        <li><strong>__init__(self, title, description, due_date)</strong>: Инициализирует объект Task.</li>
+        <li><strong>mark_as_completed(self)</strong>: Устанавливает статус задачи как 'выполнена'.</li>
+        <li><strong>update_status(self, status)</strong>: Обновляет статус задачи.</li>
+    </ul>
+
+    <h3>2. Класс TaskTemplate</h3>
+    <p>Представляет шаблон задачи для упрощения создания типовых задач.</p>
+    <h4>Атрибуты:</h4>
+    <ul>
+        <li><strong>template_name (str)</strong>: Название шаблона.</li>
+        <li><strong>default_description (str)</strong>: Описание по умолчанию для задач, созданных из шаблона.</li>
+    </ul>
+    <h4>Методы:</h4>
+    <ul>
+        <li><strong>__init__(self, template_name, default_description)</strong>: Инициализирует объект TaskTemplate.</li>
+        <li><strong>create_task(self, title, due_date)</strong>: Создает задачу на основе шаблона.</li>
+    </ul>
+
+    <h3>3. Класс Milestone</h3>
+    <p>Представляет майлстоун в проекте.</p>
+    <h4>Атрибуты:</h4>
+    <ul>
+        <li><strong>milestone_name (str)</strong>: Название майлстоуна.</li>
+        <li><strong>due_date (str)</strong>: Срок выполнения майлстоуна в формате 'YYYY-MM-DD'.</li>
+        <li><strong>tasks (list)</strong>: Список задач, связанных с майлстоуном.</li>
+    </ul>
+    <h4>Методы:</h4>
+    <ul>
+        <li><strong>__init__(self, milestone_name, due_date)</strong>: Инициализирует объект Milestone.</li>
+        <li><strong>add_task(self, task)</strong>: Добавляет задачу к майлстоуну.</li>
+        <li><strong>get_status(self)</strong>:

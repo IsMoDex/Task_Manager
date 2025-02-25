@@ -1,0 +1,108 @@
+/* Общие стили */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Контейнер для центрирования контента */
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовки */
+h1,
+h2 {
+  text-align: center;
+}
+
+/* Шапка */
+header {
+  background: #333;
+  color: white;
+  text-align: center;
+  position: sticky;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Секции */
+.section {
+  padding: 60px 0;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* Лабораторные работы */
+.lab-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.lab-list li {
+  margin: 20px 0;
+}
+
+.lab-list a {
+  text-decoration: none;
+  font-size: 20px;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.lab-list a:hover {
+  background: #ffcc00;
+  color: #333;
+}
+
+/* Контакты */
+#contact a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Футер */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
